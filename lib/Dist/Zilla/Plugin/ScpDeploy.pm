@@ -1,10 +1,10 @@
 package Dist::Zilla::Plugin::ScpDeploy;
 BEGIN {
-  $Dist::Zilla::Plugin::ScpDeploy::VERSION = '20110610.2306';
+  $Dist::Zilla::Plugin::ScpDeploy::VERSION = '1.20110611.0641';
 }
 # ABSTRACT: deploy via scp and ssh
 
-use Moose;
+use Moose 2.0007;
 use Moose::Util::TypeConstraints;
 
 use warnings;
@@ -42,7 +42,7 @@ Dist::Zilla::Plugin::ScpDeploy - deploy via scp and ssh
 
 =head1 VERSION
 
-version 20110610.2306
+version 1.20110611.0641
 
 =head1 DESCRIPTION
 

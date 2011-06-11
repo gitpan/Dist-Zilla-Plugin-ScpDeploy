@@ -11,7 +11,11 @@ use ExtUtils::MakeMaker 6.30;
 my %WriteMakefileArgs = (
   'ABSTRACT' => 'deploy via scp and ssh',
   'AUTHOR' => 'chromatic',
-  'BUILD_REQUIRES' => {},
+  'BUILD_REQUIRES' => {
+    'Test::DZil' => '0',
+    'Test::Fatal' => '0.006',
+    'Test::More' => '0.88'
+  },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.30'
   },
@@ -20,9 +24,13 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'Dist::Zilla::Plugin::ScpDeploy',
   'PREREQ_PM' => {
-    'Dist::Zilla' => '4.200007'
+    'Dist::Zilla' => '4.200007',
+    'Dist::Zilla::Role::Releaser' => '0',
+    'Moose' => '2.0007',
+    'Moose::Util::TypeConstraints' => '0',
+    'namespace::autoclean' => '0'
   },
-  'VERSION' => '20110610.2306',
+  'VERSION' => '1.20110611.0641',
   'test' => {
     'TESTS' => 't/*.t'
   }
