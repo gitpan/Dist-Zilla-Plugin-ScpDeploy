@@ -1,21 +1,22 @@
 package Dist::Zilla::Plugin::ScpDeploy;
 BEGIN {
-  $Dist::Zilla::Plugin::ScpDeploy::VERSION = '1.20110611.0641';
+  $Dist::Zilla::Plugin::ScpDeploy::VERSION = '1.20110614';
 }
 # ABSTRACT: deploy via scp and ssh
 
 use Moose 2.0007;
 use Moose::Util::TypeConstraints;
 
-use warnings;
 use namespace::autoclean;
+use constant HOSTSTYPE => __PACKAGE__ . '::Types::Hosts';
 
 with 'Dist::Zilla::Role::Releaser';
 
-coerce 'ArrayRef[Str]', from 'Str', via { [ split /,\s*/, $_ ] };
+subtype HOSTSTYPE, as 'ArrayRef[Str]';
+coerce  HOSTSTYPE, from 'Str', via { [ split /,\s*/, $_ ] };
 
-has [qw( remote_dir command )],      is => 'ro', required => 1;
-has 'hosts', isa => 'ArrayRef[Str]', is => 'ro', required => 1, coerce => 1;
+has [qw( remote_dir command )], is => 'ro', required => 1;
+has 'hosts', isa => HOSTSTYPE,  is => 'ro', required => 1, coerce => 1;
 
 sub release
 {
@@ -42,7 +43,7 @@ Dist::Zilla::Plugin::ScpDeploy - deploy via scp and ssh
 
 =head1 VERSION
 
-version 1.20110611.0641
+version 1.20110614
 
 =head1 DESCRIPTION
 

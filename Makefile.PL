@@ -28,9 +28,10 @@ my %WriteMakefileArgs = (
     'Dist::Zilla::Role::Releaser' => '0',
     'Moose' => '2.0007',
     'Moose::Util::TypeConstraints' => '0',
+    'constant' => '0',
     'namespace::autoclean' => '0'
   },
-  'VERSION' => '1.20110611.0641',
+  'VERSION' => '1.20110614',
   'test' => {
     'TESTS' => 't/*.t'
   }
