@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::ScpDeploy;
 BEGIN {
-  $Dist::Zilla::Plugin::ScpDeploy::VERSION = '1.20110614';
+  $Dist::Zilla::Plugin::ScpDeploy::VERSION = '1.20110621';
 }
 # ABSTRACT: deploy via scp and ssh
 
@@ -43,11 +43,11 @@ Dist::Zilla::Plugin::ScpDeploy - deploy via scp and ssh
 
 =head1 VERSION
 
-version 1.20110614
+version 1.20110621
 
 =head1 DESCRIPTION
 
-This plugin can automatically deploy a release when you run C<dist release>. It
+This plugin can automatically deploy a release when you run C<dzil release>. It
 performs two actions for you:
 
 =over 4

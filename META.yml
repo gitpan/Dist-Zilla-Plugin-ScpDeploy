@@ -22,4 +22,4 @@ requires:
   Moose::Util::TypeConstraints: 0
   constant: 0
   namespace::autoclean: 0
-version: 1.20110614
+version: 1.20110621
