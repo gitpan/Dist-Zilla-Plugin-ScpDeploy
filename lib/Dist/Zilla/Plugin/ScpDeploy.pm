@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::ScpDeploy;
 BEGIN {
-  $Dist::Zilla::Plugin::ScpDeploy::VERSION = '1.20110621';
+  $Dist::Zilla::Plugin::ScpDeploy::VERSION = '1.20110709';
 }
 # ABSTRACT: deploy via scp and ssh
 
@@ -43,7 +43,7 @@ Dist::Zilla::Plugin::ScpDeploy - deploy via scp and ssh
 
 =head1 VERSION
 
-version 1.20110621
+version 1.20110709
 
 =head1 DESCRIPTION
 
@@ -76,7 +76,7 @@ to configure the remote hosts such that the remote directory and the remote
 command to run are available.
 
 The remote command receives one argument: the path to the release tarball in
-the give remote directory.
+the given remote directory.
 
 =head1 AUTHOR
 

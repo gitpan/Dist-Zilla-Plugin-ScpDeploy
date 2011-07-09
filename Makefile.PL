@@ -31,7 +31,7 @@ my %WriteMakefileArgs = (
     'constant' => '0',
     'namespace::autoclean' => '0'
   },
-  'VERSION' => '1.20110621',
+  'VERSION' => '1.20110709',
   'test' => {
     'TESTS' => 't/*.t'
   }
